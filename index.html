@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Pizza Paradiso - Las mejores pizzas, bebidas, postres y entradas de la ciudad.">
+        <title>Pizza Paradiso - Menú Principal</title>
+        <link rel="stylesheet" href="static/css/index.css">
+    </head>
+<body>
+    <header>
+        <h1>Bienvenidos a <span>Pizza Paradiso</span></h1>
+        <p>¡Las mejores pizzas y más, justo aquí!</p>
+    </header>
+
+<!-- Popup de login y crear cuenta -->
+<div id="popup" class="popup activo">
+    <div class="popup-contenido">
+        <span class="popup-cerrar" onclick="cerrarPopup()">X</span>
+        <p class="popup-texto">¡Crea una cuenta para disfrutar de beneficios exclusivos!</p>
+        <button class="popup-btn">Iniciar sesión</button>
+        <button id="abrirFormulario" class="popup-btn">Crear cuenta</button>
+    </div>
+</div>
+
+<!-- Segunda ventana modal -->
+<div id="modal2" class="popup" style="display: none;">
+    <div class="popup-contenido">
+        <p class="popup-texto">Regístrate</p>
+
+        <form>
+            <form>
+                <label for="email">Nombre completo:</label>
+                <input type="nombre" id="nombre" name="nombre" required>
+                <input type="text" id="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z.-]+/.[a-zA-Z]{2,}$" required>
+            </form>
+
+            <form>
+                <label for="telefono">Teléfono (10 dígitos):</label>
+                <input type="text" id="telefono" name="telefono" pattern="[0-9]{10}" required>
+            </form>
+
+            <form>
+                <label for="email">Correo electronico:</label>
+                <input type="text" id="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z.-]+/.[a-zA-Z]{2,}$" required>
+            </form>
+
+            <input type="submit" value="Enviar" style="border: 2px solid green; padding: 5px 10px; cursor: pointer; margin-top: 15px;">
+            <button type="button" onclick="cerrarX('modal2')" style="border: 2px solid red; padding: 5px 10px; cursor: pointer; margin-top: 15px;">Cerrar</button>
+            
+            <style>
+            input:invalid {
+                border: 2px solid red;
+            }
+            
+            input:valid {
+                border: 2px solid green;
+            }
+            </style>
+
+
+        </form>
+    </div>
+</div>
+
+
+    <nav>
+        <ul>
+            <li><a href="templates/pizzas.html">Pizzas</a></li>
+            <li><a href="templates/bebidas.html">Bebidas</a></li>
+            <li><a href="templates/postres.html">Postres</a></li>
+            <li><a href="templates/entradas.html">Entradas</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="intro text-center">
+            <h3>Disfruta de las mejores pizzas de la ciudad</h3>
+            <p>Elige entre nuestra variedad de sabores y tipos de orilla</p>
+        </section>
+
+        <section class="container">
+            <div class="text">
+                <h3>Variedad de sabores</h3>
+                <p>Con más de 20 opciones, nuestras pizzas son únicas en la ciudad.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut nulla non justo euismod volutpat. Cras in gravida leo.</p>
+                <p>Estamos listos para brindarte una experiencia inigualable con ingredientes frescos y auténticos.</p>
+            </div>
+
+            <!-- Carrusel de imágenes -->
+            <div class="carousel">
+                <div class="carousel-item">
+                    <a href="/templates/pizzas.html">
+                        <img src="static/images/index/pizzas.png" alt="Pizzas frescas">
+                    </a>
+                    <p>Pizzas frescas y deliciosas</p>
+                </div>
+                <div class="carousel-item">
+                    <a href="/templates/bebidas.html">
+                        <img src="static/images/index/image.png" alt="Variedad de bebidas">
+                    </a>
+                    <p>Variedad de bebidas refrescantes</p>
+                </div>
+                <div class="carousel-item">
+                    <a href="/templates/postres.html">
+                        <img src="static/images/index/postres.png" alt="Deliciosos postres">
+                    </a>
+                    <p>Deliciosos postres para endulzar tu día</p>
+                </div>
+                <div class="carousel-item">
+                    <a href="/templates/entradas.html">
+                        <img src="static/images/index/entradas.png" alt="Apertivos y entradas">
+                    </a>
+                    <p>Apertivos y entradas irresistibles</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Pizza Paradiso - Todos los derechos reservados</p>
+            <div class="footer-social">
+                <a href="https://facebook.com/pizzaparadiso" target="_blank">Facebook</a>
+                <a href="https://instagram.com/pizzaparadiso" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="static/js/index.js"></script>
+</body>
+</html>
