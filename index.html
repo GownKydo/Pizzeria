@@ -18,51 +18,23 @@
     <div class="popup-contenido">
         <span class="popup-cerrar" onclick="cerrarPopup()">X</span>
         <p class="popup-texto">¡Crea una cuenta para disfrutar de beneficios exclusivos!</p>
-        <button class="popup-btn">Iniciar sesión</button>
+        
+        <!-- Menú de inicio de sesión -->
+        <button class="popup-btn" onclick="mostrarLogin()">Iniciar sesión</button>
         <button id="abrirFormulario" class="popup-btn">Crear cuenta</button>
+        
+        <div id="loginForm" class="login-form" style="display:none;">
+            <h3>Iniciar sesión</h3>
+            <form id="formLogin" onsubmit="return loginSubmit(event)">
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+                <button type="submit">Ingresar</button>
+            </form>
+        </div>
     </div>
 </div>
-
-<!-- Segunda ventana modal -->
-<div id="modal2" class="popup" style="display: none;">
-    <div class="popup-contenido">
-        <p class="popup-texto">Regístrate</p>
-
-        <form>
-            <form>
-                <label for="email">Nombre completo:</label>
-                <input type="nombre" id="nombre" name="nombre" required>
-                <input type="text" id="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z.-]+/.[a-zA-Z]{2,}$" required>
-            </form>
-
-            <form>
-                <label for="telefono">Teléfono (10 dígitos):</label>
-                <input type="text" id="telefono" name="telefono" pattern="[0-9]{10}" required>
-            </form>
-
-            <form>
-                <label for="email">Correo electronico:</label>
-                <input type="text" id="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z.-]+/.[a-zA-Z]{2,}$" required>
-            </form>
-
-            <input type="submit" value="Enviar" style="border: 2px solid green; padding: 5px 10px; cursor: pointer; margin-top: 15px;">
-            <button type="button" onclick="cerrarX('modal2')" style="border: 2px solid red; padding: 5px 10px; cursor: pointer; margin-top: 15px;">Cerrar</button>
-            
-            <style>
-            input:invalid {
-                border: 2px solid red;
-            }
-            
-            input:valid {
-                border: 2px solid green;
-            }
-            </style>
-
-
-        </form>
-    </div>
-</div>
-
 
     <nav>
         <ul>

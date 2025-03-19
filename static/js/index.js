@@ -1,25 +1,26 @@
-// Muestra el popup automáticamente al cargar la página
-document.addEventListener('DOMContentLoaded', function() {
-    // Muestra el popup inmediatamente después de que la página se haya cargado
-    document.getElementById('popup').classList.add('activo');
-});
+// Mostrar el formulario de login
+function mostrarLogin() {
+    const loginForm = document.getElementById('loginForm');
+    loginForm.style.display = 'block';
+}
 
-// Función para cerrar el popup
+// Cerrar el popup
 function cerrarPopup() {
     document.getElementById('popup').classList.remove('activo');
 }
 
-//Cerrar segunda ventana
-function cerrarX() {
-    document.getElementById('popup').classList.remove('activo');
+// Mostrar alerta al enviar el formulario de login
+function loginSubmit(event) {
+    event.preventDefault(); // Evita que el formulario se envíe de manera tradicional
+
+    // Lógica para manejar el login (puedes agregar validaciones aquí si lo necesitas)
+    alert('¡Datos enviados correctamente!');
+
+    // Cerrar el popup después de enviar
+    cerrarPopup();
 }
 
-
-document.getElementById('abrirFormulario').addEventListener('click', function() {
-    document.getElementById('modal2').style.display = 'flex';
-});
-
-// Función para cerrar ventanas modales
-function cerrarX(id) {
-    document.getElementById(id).style.display = 'none';
-}
+// Si se requiere abrir el popup al cargar la página
+window.onload = function() {
+    document.getElementById('popup').classList.add('activo');
+};
