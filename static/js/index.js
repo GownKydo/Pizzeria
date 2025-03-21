@@ -1,26 +1,41 @@
-// Mostrar el formulario de login
-function mostrarLogin() {
-    const loginForm = document.getElementById('loginForm');
-    loginForm.style.display = 'block';
+// Función para abrir el popup principal (para crear cuenta)
+function abrirPopup() {
+    document.getElementById('popup').style.display = 'block';
 }
 
-// Cerrar el popup
+// Función para cerrar el popup principal
 function cerrarPopup() {
-    document.getElementById('popup').classList.remove('activo');
+    document.getElementById('popup').style.display = 'none';
 }
 
-// Mostrar alerta al enviar el formulario de login
+// Función para mostrar el popup de login
+function mostrarLogin() {
+    document.getElementById('popupLogin').style.display = 'block'; // Muestra el popup de login
+    document.getElementById('popup').style.display = 'none'; // Oculta el popup principal
+}
+
+// Función para cerrar el popup de login
+function cerrarPopupLogin() {
+    document.getElementById('popupLogin').style.display = 'none';
+    document.getElementById('popup').style.display = 'block'; // Muestra de nuevo el popup principal
+}
+
+// Función para gestionar el submit del formulario de login
 function loginSubmit(event) {
-    event.preventDefault(); // Evita que el formulario se envíe de manera tradicional
-
-    // Lógica para manejar el login (puedes agregar validaciones aquí si lo necesitas)
-    alert('¡Datos enviados correctamente!');
-
-    // Cerrar el popup después de enviar
-    cerrarPopup();
+    event.preventDefault();
+    // Aquí va la lógica para hacer el login (validaciones, envío de datos, etc.)
+    console.log('Iniciar sesión con', document.getElementById('usuario').value, document.getElementById('contrasena').value);
 }
 
-// Si se requiere abrir el popup al cargar la página
-window.onload = function() {
-    document.getElementById('popup').classList.add('activo');
-};
+// Función para mostrar u ocultar la contraseña
+function togglePassword() {
+    var passwordInput = document.getElementById('contrasena');
+    var toggleButton = document.getElementById('togglePassword');
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        toggleButton.textContent = "Ocultar";
+    } else {
+        passwordInput.type = "password";
+        toggleButton.textContent = "Ver";
+    }
+}
