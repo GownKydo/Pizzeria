@@ -1,40 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Pizza Paradiso - Las mejores pizzas, bebidas, postres y entradas de la ciudad.">
-        <title>Pizza Paradiso - Menú Principal</title>
-        <link rel="stylesheet" href="static/css/index.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pizza Paradiso - Las mejores pizzas, bebidas, postres y entradas de la ciudad.">
+    <title>Pizza Paradiso - Menú Principal</title>
+    <link rel="stylesheet" href="static/css/index.css">
+</head>
 <body>
     <header>
-        <h1>Bienvenidos a <span>Pizza Paradiso</span></h1>
+        <a href="/index.html">
+            <h1>Bienvenidos a <span>Pizza Paradiso</span></h1>
+        </a>
         <p>¡Las mejores pizzas y más, justo aquí!</p>
     </header>
 
-<!-- Popup de login y crear cuenta -->
-<div id="popup" class="popup activo">
-    <div class="popup-contenido">
-        <span class="popup-cerrar" onclick="cerrarPopup()">X</span>
-        <p class="popup-texto">¡Crea una cuenta para disfrutar de beneficios exclusivos!</p>
-        
-        <!-- Menú de inicio de sesión -->
-        <button class="popup-btn" onclick="mostrarLogin()">Iniciar sesión</button>
-        <button id="abrirFormulario" class="popup-btn">Crear cuenta</button>
-        
-        <div id="loginForm" class="login-form" style="display:none;">
+    <!-- Popup de login y crear cuenta -->
+    <div id="popup" class="popup activo">
+        <div class="popup-contenido">
+            <span class="popup-cerrar" onclick="cerrarPopup()">X</span>
+            <p class="popup-texto">¡Crea una cuenta para disfrutar de beneficios exclusivos!</p>
+            
+            <!-- Menú de inicio de sesión -->
+            <button class="popup-btn" onclick="mostrarLogin()">Iniciar sesión</button>
+            <button id="abrirFormulario" class="popup-btn">Crear cuenta</button>
+        </div>
+    </div>
+
+    <!-- Segunda ventana modal para login -->
+    <div id="popupLogin" class="popup login-popup" style="display:none;">
+        <div class="popup-contenido">
+            <span class="popup-cerrar" onclick="cerrarPopupLogin()">X</span>
             <h3>Iniciar sesión</h3>
             <form id="formLogin" onsubmit="return loginSubmit(event)">
-                <label for="usuario">Usuario:</label>
+                <label for="usuario">Usuario o correo electrónico</label>
                 <input type="text" id="usuario" name="usuario" required>
-                <label for="contrasena">Contraseña:</label>
-                <input type="password" id="contrasena" name="contrasena" required>
+                
+                <label for="contrasena">Contraseña</label>
+                <div class="password-container">
+                    <input type="password" id="contrasena" name="contrasena" required>
+                    <button type="button" id="togglePassword" class="show-password-btn" onclick="togglePassword()">Ver</button>
+                </div>
+                
                 <button type="submit">Ingresar</button>
             </form>
         </div>
     </div>
-</div>
 
     <nav>
         <ul>
@@ -54,7 +65,7 @@
         <section class="container">
             <div class="text">
                 <h3>Variedad de sabores</h3>
-                <p>Con más de 20 opciones, nuestras pizzas son únicas en la ciudad.</p>
+                <p>Nuestras pizzas son únicas en la ciudad.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut nulla non justo euismod volutpat. Cras in gravida leo.</p>
                 <p>Estamos listos para brindarte una experiencia inigualable con ingredientes frescos y auténticos.</p>
             </div>
@@ -99,7 +110,6 @@
         </div>
     </footer>
     
-
     <script src="static/js/index.js"></script>
 </body>
 </html>
