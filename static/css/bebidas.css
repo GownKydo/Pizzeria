@@ -7,15 +7,6 @@ body {
     padding: 0px;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 24px;
-}
-
-/* Estilos del pie de página */
 footer {
     text-align: center;
     padding: 20px;
@@ -36,6 +27,24 @@ footer {
 
 .footer-link:hover {
     text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Para que los enlaces dentro de elementos como h1 o p no cambien el color */
+}
+
+/* Hover effect en los botones */
+.button:hover {
+    background-color: #c1351d;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
 }
 
 /* Estilos de la sección principal */
@@ -119,5 +128,43 @@ main {
 
     header {
         font-size: 18px;
+    }
+}
+
+
+/* Estilos del footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-container p {
+    margin: 0;
+}
+
+.footer-social a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-social a:hover {
+    color: #ff5722;
+}
+
+/* Responsive: Los enlaces sociales se apilan en dispositivos pequeños */
+@media (max-width: 768px) {
+    .footer-social {
+        margin-top: 10px;
     }
 }
