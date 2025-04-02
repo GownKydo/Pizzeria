@@ -18,7 +18,7 @@
 
 Primera idea de la home page de la pagina:
 
-[Avance 1](/Avances/avance1.png)
+![Avance 1](/Avances/avance1.png)
 
 Primer diseño de la pagina dedicada a una pizzeria con el nombre "Pizza Paradiso"
 
@@ -36,3 +36,7 @@ Se decidio que el home page llevara 4 paginas para que de igual forma cada inegr
 [Menu entradas](/Avances/AvanceEntradas.png)
 
 [Menu Postres](/Avances/AvancePostres.png)
+
+
+### Performance de la pagina web
+
