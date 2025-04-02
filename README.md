@@ -22,20 +22,20 @@ Primera idea de la home page de la pagina:
 
 Primer diseño de la pagina dedicada a una pizzeria con el nombre "Pizza Paradiso"
 
-[Avance 2](/Avances/avance3.png)
+![Avance 2](/Avances/avance3.png)
 
 
 ### Implementacion de una barra de navegacion 
 
 Se decidio que el home page llevara 4 paginas para que de igual forma cada inegrante del equipo pueda desarrollar una pagina y de igual forma extender el menu dentro de la pgaina de nuestra pizzeria
 
-[Menu Pizzas](/Avances/AvancePizzas.png)
+![Menu Pizzas](/Avances/AvancePizzas.png)
 
-[Menu Bebidas](/Avances/AvanceBebidas.png)
+![Menu Bebidas](/Avances/AvanceBebidas.png)
 
-[Menu entradas](/Avances/AvanceEntradas.png)
+![Menu entradas](/Avances/AvanceEntradas.png)
 
-[Menu Postres](/Avances/AvancePostres.png)
+![Menu Postres](/Avances/AvancePostres.png)
 
 
 ### Performance de la pagina web
